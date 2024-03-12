@@ -11,4 +11,14 @@ The file rcBK-RF-Model-module.ipynb reads and uses the model and can also use da
 
 If you just want to use the already trained model to predict x-evolved dipoles and do not need to read dipoles generated from https://github.com/hejajama/rcbk, we recommend to use https://github.com/schenke/fast-rcBK
 
+Make sure you have pybind11 installed. (e.g. by doing pip install pybind11)
+
+To compile the module do:
+mkdir build
+cd build
+cmake ..
+make
+
+The module will be in the main directory. Then try importing it in python, for example by using the included jupyter notebooks.
+
 
