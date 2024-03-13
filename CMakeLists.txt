@@ -13,10 +13,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 find_package(GSL REQUIRED)
 include_directories(${GSL_INCLUDE_DIRS})
-include_directories("/opt/homebrew/anaconda3/include/python3.11")
-
-add_subdirectory(src)
-#add_subdirectory(pybind11)
 
 # Find Pybind11 package
 find_package(pybind11 REQUIRED)
@@ -24,6 +20,7 @@ find_package(pybind11 REQUIRED)
 # Add the Pybind11 include directories
 include_directories(${pybind11_INCLUDE_DIRS})
 
+add_subdirectory(src)
 
 pybind11_add_module(dipole_module src/dipole_amplitude.cpp)
 
